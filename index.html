@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png ">
 </head>
 
 <body>
@@ -125,11 +125,10 @@
 
             <div class="content-section" id="projects">
                 <h2>Projects</h2>
-                <div class="project-item">
-                    <h3>E-commerce Website</h3>
-                    <p>Built using MERN stack</p>
-                </div>
+            
+                <div id="projects-container"></div> 
             </div>
+
 
             <div class="content-section" id="contact">
                 <h2>Contact Me</h2>
@@ -143,17 +142,7 @@
         </div>
     </div>
 
-    <script>
-        document.querySelectorAll('.side-nav li').forEach(item => {
-            item.addEventListener('click', function () {
-                document.querySelectorAll('.side-nav li').forEach(li => li.classList.remove('active'));
-                document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('active'));
-                this.classList.add('active');
-                const target = this.getAttribute('data-target');
-                document.getElementById(target).classList.add('active');
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
