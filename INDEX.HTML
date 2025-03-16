@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Different Shaped Cards</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-card">
+            <img src="profile.jpeg" alt="Profile" class="profile-img">
+            <h2>Kush Shanware</h2>
+            <p class="subtitle">Software Student</p>
+            <hr>
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Shanwarekush@mail.com</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 7058051975</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-birthday-cake"></i>
+                    <span>May 2, 2004</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Police Nagar, Nagpur</span>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/Kush_shanware/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/kushshanware/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/Kushanware" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="right-card">
+            <nav class="side-nav">
+                <ul>
+                    <li class="active" data-target="about"><i class="fas fa-user"></i> About</li>
+                    <li data-target="resume"><i class="fas fa-file-alt"></i> Resume</li>
+                    <li data-target="projects"><i class="fas fa-briefcase"></i> Projects</li>
+                    <li data-target="contact"><i class="fas fa-envelope"></i> Contact</li>
+                </ul>
+            </nav>
+
+            <div class="content-section active" id="about">
+                <h2>About Me</h2>
+                <p class="about-text">
+                    I am an enthusiastic Information Technology student at Priyadarshini College of Engineering with a strong passion for software 
+                    development, Android app development, and embedded systems. I enjoy working on innovative projects that combine hardware and 
+                    software to solve real-world problems.
+                </p>
+                <div class="profile-summary">
+                    <div class="summary-column">
+                        <h3>What I Do</h3>
+                        <ul class="about-list">
+                            <li>💻 Front-end Development</li>
+                            <li>🎨 Arduino Projects</li>
+                            <li>📱 Competitive Programming</li>
+                            <li>⚡ Performance Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skills">
+                    <h3>Core Skills</h3>
+                    <div class="skills-tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>C++</span>
+                        <span>Python</span>
+                        <span>Git</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section" id="resume">
+                <h2>Resume</h2>
+                <div class="resume-item">
+                    <h3>Education</h3>
+                    <p><strong>Priyadarshini College of Engineering</strong><br>
+                        Bachelor of Technology - Information Technology (GPA: 7.33)<br>
+                        Nagpur, India<br>
+                        August 2023 - Present<br>
+                        <em>Courses:</em> Operating Systems, Data Structures, C, C++</p>
+                    <p><strong>Progressive Junior College</strong><br>
+                        Higher Secondary School (81%)<br>
+                        Gondia, India<br>
+                        June 2021 – March 2022</p>
+                </div>
+                <div class="resume-item">
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li><strong>Languages:</strong> C++, C, Kotlin</li>
+                        <li><strong>Platforms:</strong> Linux, Windows, Arduino</li>
+                        <li><strong>Web:</strong> HTML, CSS, JavaScript</li>
+                    </ul>
+                </div>
+                <div class="resume-item">
+                    <h3>Certifications</h3>
+                    <ul>
+                        <li>Google Cloud Arcade Program - Hands-on cloud computing labs</li>
+                        <li>Cisco CPA: Programming Essentials in C++</li>
+                        <li>Internet of Things Applications - Basic IoT fundamentals</li>
+                        <li>Ethical Hacking For Beginners - Linux basics & hacking fundamentals</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-section" id="projects">
+                <h2>Projects</h2>
+                <div class="project-item">
+                    <h3>E-commerce Website</h3>
+                    <p>Built using MERN stack</p>
+                </div>
+            </div>
+
+            <div class="content-section" id="contact">
+                <h2>Contact Me</h2>
+                <form class="contact-form">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <textarea placeholder="Message"></textarea>
+                    <button type="submit">Send</button>
+                </form> 
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.side-nav li').forEach(item => {
+            item.addEventListener('click', function () {
+                document.querySelectorAll('.side-nav li').forEach(li => li.classList.remove('active'));
+                document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('active'));
+                this.classList.add('active');
+                const target = this.getAttribute('data-target');
+                document.getElementById(target).classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
