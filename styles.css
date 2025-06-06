@@ -533,6 +533,22 @@ body {
     background: var(--accent-hover);
 }
 
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color var(--transition-speed);
+}
+
+.mobile-menu-btn:hover {
+    color: var(--accent);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-content {
