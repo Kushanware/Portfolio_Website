@@ -52,18 +52,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Hero CTA Buttons
-    const ctaButtons = document.querySelectorAll('.hero-cta a');
-    ctaButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            // Check if this is an external link (has target="_blank" or is the resume link)
-            if (button.getAttribute('target') === '_blank' || button.classList.contains('mobile-resume')) {
-                return; // Let the default behavior handle external links
-            }
-            
-            e.preventDefault();
-            const target = button.getAttribute('href').replace('#', '');
-            switchSection(target);
-        });
+    document.querySelector('.hero-cta').addEventListener('click', (e) => {
+        const button = e.target.closest('a');
+        if (!button) return; // If click wasn't on a button, ignore it
+        
+        // Check if this is an external link or resume button
+        if (button.getAttribute('target') === '_blank' || 
+            button.classList.contains('mobile-resume') || 
+            button.href.includes('drive.google.com')) {
+            return; // Let the default behavior handle external links
+        }
+        
+        e.preventDefault();
+        const target = button.getAttribute('href').replace('#', '');
+        switchSection(target);
     });
 
     // Initialize AOS
