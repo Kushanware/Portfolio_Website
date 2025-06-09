@@ -55,6 +55,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const ctaButtons = document.querySelectorAll('.hero-cta a');
     ctaButtons.forEach(button => {
         button.addEventListener('click', (e) => {
+            // Check if this is an external link (has target="_blank" or is the resume link)
+            if (button.getAttribute('target') === '_blank' || button.classList.contains('mobile-resume')) {
+                return; // Let the default behavior handle external links
+            }
+            
             e.preventDefault();
             const target = button.getAttribute('href').replace('#', '');
             switchSection(target);
