@@ -977,3 +977,49 @@ body {
     background: linear-gradient(135deg, #4CAF50, #388e3c);
     box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
 }
+
+/* Mobile Resume Button Styles */
+.mobile-resume {
+    display: none;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    border: none;
+}
+
+.mobile-resume:hover {
+    background: linear-gradient(135deg, #45a049, #388e3c);
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .hero-cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .hero-cta .row-buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .hero-cta .primary,
+    .hero-cta .secondary {
+        flex: 1;
+        min-width: calc(50% - 0.5rem);
+        margin: 0;
+    }
+
+    .hero-cta .mobile-resume {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Hide the resume section button on mobile */
+    .resume-button-container {
+        display: none;
+    }
+}
