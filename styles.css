@@ -937,3 +937,43 @@ body {
         opacity: 0;
     }
 }
+
+/* Resume Button Styles */
+.resume-button-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(76, 175, 80, 0.2);
+}
+
+.resume-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+    background: linear-gradient(135deg, #45a049, #388e3c);
+}
+
+.resume-btn i {
+    font-size: 1.2rem;
+}
+
+[data-theme="dark"] .resume-btn {
+    background: linear-gradient(135deg, #66bb6a, #4CAF50);
+    box-shadow: 0 2px 4px rgba(76, 175, 80, 0.3);
+}
+
+[data-theme="dark"] .resume-btn:hover {
+    background: linear-gradient(135deg, #4CAF50, #388e3c);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}
